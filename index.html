@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="./scss/app.css">
+    <title>Document</title>
+    
+</head>
+<body>
+    <nav>
+        <img src="./img/logo.svg" alt="">
+        <ul>
+            <li>Home</li>
+            <li>Chi siamo</li>
+            <li>Store</li>
+            <button onclick="questions(event)">Hai domande?</button>
+        </ul>
+
+    </nav>
+    <main>
+        
+        <div id="inputNone">
+            <div id="inputAppend"></div>
+            
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut voluptatum tempore eos, minus, corrupti error dignissimos earum praesentium in nostrum optio assumenda. Blanditiis mollitia vel quasi, perspiciatis natus doloremque commodi?</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut voluptatum tempore eos, minus, corrupti error dignissimos earum praesentium in nostrum optio assumenda. Blanditiis mollitia vel quasi, perspiciatis natus doloremque commodi?</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut voluptatum tempore eos, minus, corrupti error dignissimos earum praesentium in nostrum optio assumenda. Blanditiis mollitia vel quasi, perspiciatis natus doloremque commodi?</p>
+        </div>
+        
+    </main>
+
+    <script>
+        
+        let name = ""
+        let surname = ""
+        let question = ""
+
+        const questions = (elem) =>{
+                let nameInput = document.createElement("input")
+                nameInput.placeholder = "Inserisci il tuo nome"
+                let surnameInput = document.createElement("input")
+                surnameInput.placeholder = "Inserisci il tuo cognome"
+                let questionInput = document.createElement("input")
+                questionInput.placeholder = "Inserisci la domanda"
+                let button = document.createElement("button")
+                button.innerText = "Invia"
+                button.onclick = submit
+                let div = document.getElementById("inputAppend")
+                div.append(nameInput)
+                div.append(surnameInput)
+                div.append(questionInput)
+                div.append(button)
+                div.style.display="none"
+            if(elem.target.innerText === "Hai domande?"){
+                let div = document.getElementById("inputAppend")
+                div.style.display="none"
+                elem.target.style.backgroundColor = "red"
+                elem.target.innerText = "Cancella"
+            } else {
+                let div = document.getElementById("inputAppend")
+                div.style.display = "none"
+                elem.target.innerText = "Hai domande?"
+                backgroundColor = "white"
+            }
+            
+            
+            name = nameInput.value
+            
+        }
+
+        
+
+        const submit = (elem) => {
+            console.log(name)
+            
+            let none = document.getElementById("inputNone")
+            none.style.display="none"
+            let div = document.createElement("div")
+            div.style.width = "300px"
+            div.style.height = "300px"
+            div.style.backgroundColor = "lightpink"
+            let pName = document.createElement("p")
+            pName.innerText = name
+            let main = document.querySelector("main")
+            main.append("div")
+            div.append("pName")
+        }
+
+    </script>
+
+</body>
+</html>

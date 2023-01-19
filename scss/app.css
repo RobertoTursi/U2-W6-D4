@@ -1,0 +1,74 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightpink;
+  padding: 10px 30px;
+}
+nav img {
+  width: 80px;
+  height: 40px;
+}
+@media screen and (max-width: 576px) {
+  nav img {
+    width: 90px;
+    height: 45px;
+  }
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+@media screen and (max-width: 576px) {
+  nav ul {
+    width: 35px;
+    height: 20px;
+    background-color: red;
+  }
+}
+nav ul li {
+  color: black;
+  font-size: 1.2em;
+  margin: 0 10px;
+}
+@media screen and (max-width: 576px) {
+  nav ul {
+    display: none;
+  }
+}
+nav ul button {
+  padding: 10px 20px;
+  border: 2px solid lightseagreen;
+  color: black;
+  border-radius: 25px;
+  box-shadow: 10 0 0 grey;
+}
+nav ul button:hover {
+  box-shadow: 10 10 0 grey;
+  background-color: lightseagreen;
+}
+
+main {
+  padding: 10px 30px;
+}
+main p {
+  padding-top: 20px;
+}/*# sourceMappingURL=app.css.map */
